@@ -1,0 +1,39 @@
+
+<ion-content>
+  <div class="div1">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg = "10" sizeMd="10" sizeXs="10" offset="1" >
+          <div class="texto">
+          <ion-slides pager="true">
+            <ion-slide *ngFor="let slide of tarjetaActual">
+              <div class="slide-img-padding">
+                <img [src]="slide.url" class="img1"/>
+              </div>
+            </ion-slide>
+
+            <ion-slide>
+              <div class="slide-img-padding">
+                <img src="../assets/img12.svg" class="img2"/>
+                <ion-grid>
+                  <ion-row>
+                <ion-col sizeLg = "10" sizeMd="10" sizeXs="10" offset="1">
+                <ion-button color="danger" expand="full"  shape="round" routerLink="/leccion">Continuar</ion-button>
+                <!--<ion-button fill="clear" expand="full" routerLink="/leccion">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>-->
+                
+                </ion-col>
+              </ion-row>
+                </ion-grid>
+              </div>
+            </ion-slide>
+
+          </ion-slides>
+          <!--<ion-button color="danger" expand="full" shape="round">Finalizar</ion-button>!-->
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  </div>
+</ion-content>

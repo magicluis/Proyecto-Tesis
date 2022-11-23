@@ -1,0 +1,31 @@
+.div1{
+    overflow: scroll;
+}
+
+
+.img1{
+    height: 150px;
+}
+
+.divhijo{
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+
+.tool1{
+    background-color: #000000;
+    --background:  #E62A08;
+    color: #ffffff;
+}
+
+.btn1{
+    --background:  #E62A08;
+    color: #ffffff;
+    
+}
+
+
+

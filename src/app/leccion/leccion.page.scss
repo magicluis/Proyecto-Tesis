@@ -1,0 +1,103 @@
+
+
+ion-card-header{
+    background-color: #E62A08;
+    height: 65px;
+}
+
+  .texto{
+    //background-color: #A6DC82;
+    text-align: center;
+    //padding: 10px;
+}
+
+.texto1{
+    //background-color: #A6DC82;
+    text-align: center;
+    color: #ffff;
+    //padding: 5px;
+}
+
+.btn1{
+    width: 100px;
+}
+
+/*ion-icon {
+    color: hsl(28, 87%, 62%);
+    zoom: 2.0;
+  }*/
+
+
+.data{
+
+    border-radius: 10px;
+    //background-color: #F7DFDB;
+    background: linear-gradient(315deg, rgba(245,153,13,0.9836309523809523) 0%, rgba(240,87,98,0.3617822128851541) 47%);
+    //border: solid;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+ion-progress-bar{
+    height: 15px;
+    border-radius: 7px;
+
+
+    //--background: green;
+    //--buffer-background: #C53901;
+    //--progress-background:#fff;
+  }
+
+  .icon1{
+      color: #ffff;
+      zoom: 1.5;
+  }
+
+  .btnT{
+      height: 80px;
+  }
+
+  .btnT1{
+    height: 100px;
+}
+
+.ficon{
+    color: hsl(9, 94%, 46%);
+}
+
+.grupo{
+    align-items: center;
+    align-content: center;
+}
+
+ion-label{
+    height: auto;
+    width: auto;
+    color: #fff;
+    size: 30px;
+}
+
+ion-chip{
+    height: auto;
+    width: auto;
+    background: #E62A08;
+}
+
+.card-alert{
+    width: 100px;
+    height: 30px;
+}
+
+.abajo{
+    color: #E62A08;
+}
+
+
+
+
+
+  
+

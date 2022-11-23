@@ -1,0 +1,146 @@
+
+<ion-header class="ion-no-border">
+  <ion-toolbar class="arriba">
+    <ion-buttons slot="start">
+      <ion-button type="submit" (click)="toggleMenu()" >
+        <ion-icon name="options" class="conf"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+        <ion-avatar slot="end" class="end">
+          <img src="../../assets/img5.jpg" type="submit" (click)="toggleMenu()" *ngIf="informacion.imagen == null">
+          <img src="{{ informacion.imagen }}" type="submit" (click)="toggleMenu()" *ngIf=" informacion.imagen != null ">
+        </ion-avatar>
+
+    <ion-label>
+      <h2>LECCIONES</h2>
+      <h2>{{ informacion.nombre }} {{ informacion.apellido }}</h2>
+    </ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf = "informacion.tipo == 0 ">
+
+  <ion-menu side="start" menuId="first" contentId="principal">
+    <ion-content class="contenido1">
+      <ion-list>
+        <ion-item>
+          <ion-icon name="person-add" slot="start"></ion-icon>
+          <ion-label routerLink="/perfil">Actualizar Perfil</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="stats-chart-sharp" slot="start"></ion-icon>
+          <ion-label routerLink="/estadistica">Estadisticas</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="backspace" slot="start"></ion-icon>
+          <ion-label (click)="onLogOut()">Cerrar Sesion</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col sizeLg = "2" sizeMd="4" sizeXs="6" *ngFor="let item of data">
+        <ion-card>
+          <ion-item class="item3">
+            <ion-label class="pr1"> Nivel {{ item.nivel }}</ion-label>
+            <ion-icon name="barbell-outline" class="view" routerLink="/tarjeta" (click)="seleccionNivel(item.nivel)" *ngIf="item.estrellas == 3"></ion-icon>
+            <ion-icon name="play-forward" class="view" routerLink="/tarjeta" (click)="seleccionNivel(item.nivel)" *ngIf="item.estado==true && (item.estrellas == 0 || item.estrellas == 1 || item.estrellas == 2)"></ion-icon>
+            <ion-icon name="lock-closed" class="view" *ngIf="item.estado == false"></ion-icon>
+          </ion-item>
+          
+          <ion-card-content>
+
+            <div *ngIf = "item.estado;else other_content">
+            <img src="../../assets/mochila.png" class="img1">
+            </div>
+            <ng-template #other_content>
+              <img src="../../assets/security.gif" class="img1">
+            </ng-template>
+
+            <p aling="center"><strong>{{ item.informacion }}</strong></p>
+
+            <ion-icon name="book" *ngIf="item.estrellas >= 1"></ion-icon>
+            <ion-icon name="book" *ngIf="item.estrellas >= 2"></ion-icon>
+            <ion-icon name="book" *ngIf="item.estrellas >= 3"></ion-icon>
+
+            <ion-progress-bar color="success" value="{{ item.porcentaje*0.1 }}"></ion-progress-bar>
+            <div class="porc"><h2>{{ item.porcentaje*10}}%</h2></div>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-router-outlet id="principal"></ion-router-outlet> 
+</ion-content>
+
+
+
+<ion-content *ngIf = "informacion.tipo == 1">
+
+
+  <ion-menu side="start" menuId="first" contentId="principal">
+    <ion-content class="contenido1">
+      <ion-list>
+        <ion-item>
+          <ion-icon name="person-add" slot="start"></ion-icon>
+          <ion-label routerLink="/perfil">Actualizar Perfil</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="school-sharp" slot="start"></ion-icon>
+          <ion-label routerLink="/profesor">Estudiantes</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="backspace" slot="start"></ion-icon>
+          <ion-label (click)="onLogOut()">Cerrar Sesion</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+      <ion-card class="card">
+        <div class="ca1">
+        <img src="../../assets/Ortografia_2009.jpg" class="imgca1"/>
+        </div>
+        <ion-card-header>
+          <ion-card-title> LISTADO DE PREGUNTAS </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list >     
+
+            
+  
+        <ion-item *ngFor="let item of dataPreguntas">
+          <ion-label>
+            <h2>Nivel {{ item.nivel }}</h2>
+  
+            <ion-card-content class="inicial"> <b>Pregunta:</b> {{ item.pregunta }}
+            <br> <b>Respuesta:</b> {{ item.respuesta }}
+            <br> <b>Tipo:</b> {{ item.tipo }} 
+            </ion-card-content>
+  
+          </ion-label>
+        </ion-item>
+  
+      <!--</ion-col>
+      </ion-row>
+      </ion-grid>-->
+  
+      </ion-list>
+        </ion-card-content>
+
+        </ion-card>
+
+    <ion-router-outlet id="principal"></ion-router-outlet> 
+</ion-content>

@@ -1,0 +1,64 @@
+<ion-header>
+
+  <ion-toolbar class="arriba">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/menu">
+        <ion-icon name="arrow-back" class="icon1"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical" class="icon1"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Estadisticas</ion-title>
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-item *ngFor="let item of auxProgreso">
+      <ion-avatar slot="start">
+        <img src="../../assets/mochila1.png">
+      </ion-avatar>
+      <ion-label>
+        <h1>Nivel {{ item.nivel }}</h1>
+        <h2>{{ item.informacion }}</h2>
+        <ion-grid>
+          <ion-row class="header-row">
+            <ion-col sizeLg = "4" sizeMd="4" sizeXs="4">
+              Libros
+            </ion-col>
+            <ion-col sizeLg = "4" sizeMd="4" sizeXs="4">
+              Porcentaje
+            </ion-col>
+            <ion-col sizeLg = "4" sizeMd="4" sizeXs="4">
+              Puntuacion
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col sizeLg = "4" sizeMd="4" sizeXs="4">
+              <ion-label><a>{{ item.estrellas }}</a> <ion-icon name="book" class="libro"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label sizeLg = "4" sizeMd="4" sizeXs="4"> {{ item.porcentaje*10 }} %</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label sizeLg = "4" sizeMd="4" sizeXs="4"> {{ item.puntuacion }} pts</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-label>
+    </ion-item>
+
+
+    
+
+    
+  </ion-list>
+
+</ion-content>

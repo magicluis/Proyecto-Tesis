@@ -1,0 +1,224 @@
+ion-header{
+  background-color: #434343;
+}
+
+ion-menu-button {
+  margin-left: 10px;
+}
+
+.filter {
+  margin-right: 10px;
+}
+
+.search {
+  margin-bottom: 20px;
+
+  ion-item {
+      border-radius: 10px;
+      box-shadow: 0px 13px 30px 0px rgba(0, 0, 0, 0.09);
+      padding: 8px;
+
+      ion-icon {
+          margin-right: 16px;
+      }
+
+      ion-input {
+          padding-left: 10px !important;
+          border-left: 1px solid #F4F4F4;
+      }
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 32px;
+
+  h2 {
+      margin: 0 0 0 16px;
+      color: #434343;
+  }
+
+  p {
+      margin: 0 16px 0 0;
+      color: #656565;
+  }
+}
+
+.category-slider {
+  ion-slide {
+      width: 150px;
+      height: 100px;
+      margin-right: 10px;
+      margin-left: 20px;
+      margin-bottom: 30px;
+
+      ion-col {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          h4 {
+              color: #ffffff;
+              margin: 0;
+          }
+
+          img {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 8px;
+              top: 0;
+              left: 0;
+              z-index: -1;
+              box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.16);
+          }
+      }
+  }
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.product-slider {
+  margin-bottom: 30px;
+
+  ion-slide {
+      width: 150px;
+      height: auto;
+      margin-left: 20px;
+      margin-right: 10px;
+
+      ion-col {
+          img {
+              width: 100%;
+              height: 180px;
+              object-fit: cover;
+              border-radius: 8px;
+          }
+
+          p {
+              margin-top: 5px;
+              margin-bottom: 0;
+          }
+
+          h6 {
+              margin-top: 5px;
+              margin-bottom: 0;
+          }
+      }
+  }
+}
+
+// Removing highlight when focused/clicked on product
+ion-slide:focus {
+  outline: none !important;
+}
+
+ion-col:focus {
+  outline: none !important;
+}
+
+ion-icon {
+  color: hsl(28, 87%, 62%);
+  padding-right: 4px;
+}
+
+/*ion-item{
+  color: #ffffff;
+  --background: #D63B23;
+}*/
+
+.pr1{
+  color: #ffffff;
+  --background: #D63B23;
+}
+
+.item2{
+ --background: #0886D3;
+}
+
+.item3{
+  //--background: #0A9A47;
+  --background: linear-gradient(356deg, rgba(247,197,182,1) 10%, rgba(241,2,2,0.7763480392156863) 47%);
+ }
+
+
+
+.main{
+  //--background: #F9CA1E;
+  --background: #ee300e;
+}
+
+.view{
+  color: #ffff;
+}
+
+ion-progress-bar{
+  height: 20px;
+  border-radius: 7px;
+}
+
+.porc{
+  text-align: center;
+}
+
+/*h2{
+  color: black;
+}*/
+
+.end{
+  height: 50px;
+  width: 50px;
+  padding: 4px;
+}
+
+.conf{
+  zoom: 1.5;
+  color: #ffff;
+}
+
+.arriba{
+  background-color: #000000;
+  --background:  #E62A08;
+  color: #ffffff;
+}
+
+//.ca1{
+  
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+//}
+
+.imgca1{
+  /*width: 97%;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;*/
+}
+
+.principal{
+  //border: solid;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.inicial{
+  white-space: initial;
+}
+
+
+
+
+
+
+
+
+

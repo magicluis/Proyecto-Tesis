@@ -1,0 +1,96 @@
+<ion-app>
+
+  <ion-toolbar class="tool1">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/menu">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Actualizar Informacion</ion-title>
+  </ion-toolbar>
+          
+          
+          <div class="div1">
+            
+                  <div class="divhijo">
+                    <ion-grid>
+                      <ion-row>
+                        <ion-col sizeLg = "10" sizeMd="10" sizeXs="10" offset="1">
+                    <img src="../../assets/img6.jpg" class="img1" />
+
+                 <!-- <ion-avatar>
+                    <img src="{{ informacion.imagen }}">
+                  </ion-avatar>-->
+                  
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+                  </div>
+                
+            
+          <ion-grid>
+
+
+            <ion-row>
+              <ion-col sizeLg = "10" sizeMd="10" sizeXs="10" offset="1">
+                <ion-item>
+                  <ion-label position="floating">Nombre</ion-label>
+                  <ion-input type="text" value={{informacion.nombre}} #name required></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col sizeLg = "10" sizeMd="10" sizeXs="10" offset="1">
+                <ion-item>
+                  <ion-label position="floating">Apellido</ion-label>
+                  <ion-input placeholder="Apellido" type="text" value={{informacion.apellido}} #last required></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col sizeLg = "10" sizeMd="10" sizeXs="10" offset="1">
+                <ion-item>
+                  <ion-label position="floating">Seccion</ion-label>
+                  <ion-input placeholder="Carnet" type="text" value={{informacion.seccion}} #seccion required></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col sizeLg = "10" sizeMd="10" sizeXs="10" offset="1">
+                <ion-item>
+                  <ion-label position="floating">Carnet</ion-label>
+                  <ion-input placeholder="seccion" type="text" value={{informacion.carnet}} #carnet required></ion-input>
+                </ion-item>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg = "10" sizeMd="10" sizeXs="10" offset="1">
+        <ion-button type="submit" (click)="actualizar(name,last,seccion,carnet)" expand="full" class="btn1" shape="round" >Actualizar</ion-button>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+
+</ion-app>

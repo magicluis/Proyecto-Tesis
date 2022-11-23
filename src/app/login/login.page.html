@@ -1,0 +1,64 @@
+<ion-header  class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>login</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+<!--<div class="img1">
+<ion-img src="assets/header2.png"></ion-img>
+</div>-->
+
+<div class="imgH">
+  <ion-img src="https://st2.depositphotos.com/1010735/11020/v/950/depositphotos_110202084-stock-illustration-background-with-color-letters.jpg"></ion-img>
+</div>
+
+  <ion-card-header>
+    <div class="subt">
+      <img src="../../assets/img5.jpg"/>
+      </div>
+
+  </ion-card-header>
+
+  <ion-card-content>
+
+    
+
+    <div class="nuevoCard">
+
+          <div class="subt1">
+          <ion-item>
+            <ion-input placeholder="Correo Electronico" type="text" #email required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Contraseña" type="password" #password required></ion-input>
+          </ion-item>
+          <br> 
+          <p class="ion-text-end">
+            <a routerLink="/forgot-password">Recuperar Contraseña?</a>
+          </p>
+          </div>
+          <br>
+          <div class="botton-section">
+          <ion-button class="btn1" type="submit" (click)="onLogin(email, password)">Iniciar Sesion</ion-button>
+          <br/>
+          <ion-button class="btn2" routerLink="/register">Registrarse</ion-button>
+          </div>
+
+        </div>
+
+      <div class="text-tag">
+      <span>Or via Social Media</span>
+      </div>
+
+      <!--<div class="social-btns">
+          <ion-button fill="clear" type="submit"  class="facebookbtn ion-no-padding" (click)="loginAndroidV1()">
+        <ion-img src="assets/img8.png"></ion-img>
+          </ion-button>
+        </div>-->
+  </ion-card-content>
+
+</ion-content>
+

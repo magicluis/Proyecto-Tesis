@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ortusac-44ed8": {
+      "hosting": {
+        "app": [
+          "ortusac-44ed8"
+        ]
+      }
+    }
+  }
+}

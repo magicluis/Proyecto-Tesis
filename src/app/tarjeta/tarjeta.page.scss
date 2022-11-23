@@ -1,0 +1,127 @@
+/*.img1{
+    height: 500px;
+    //width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.div1{  
+
+    margin-top: 100px;
+    //border: 1px solid black;
+    background-color: #F1E591;
+    border-radius: 5%;
+
+    position: absolute;
+    top: 15px;
+    left: 7px;
+    right: 120px;
+    margin: 0 auto;
+    width: 280px;
+    height: 250px;
+}
+
+ion-icon {
+    color: #D30808;
+    //height: 200px;
+    //padding-right: 4px;
+  }
+  .btn1{
+      background-color: red;
+      --background: red;
+      --border-radius: 100%;
+  }
+
+  ion-button{
+      border-radius: 100%;
+  }
+
+  ion-toolbar{
+      --background: #D30808;
+      color: #fff;
+  }
+
+  ion-content{
+      align-items: center;
+      align-content: center;
+  }
+
+
+  ion-card{
+      height: 520px;
+      width: 350px;
+      //width: 400px;
+      display: block;
+      margin: 0 auto;
+  }*/
+
+  
+  
+  
+  
+  /*ion-slide{
+      display: block;
+  }
+
+  .slide-img-padding{
+      padding: 20px;
+  }
+
+  h3{
+      font-size: 30px;
+      font-weight: lighter;
+      margin-bottom: 60px;
+  }
+
+  ion-slides{
+      width: 1000px;
+      right: 160px;
+      --bullet-background:grey;
+      --bullet-background-ative:#8890B2;
+  }
+
+  .img1{
+      height: 300px;
+      //width: 600px;
+      
+  }*/
+
+
+
+ion-slides{
+    --bullet-background:grey;
+    --bullet-background-ative:#8890B2;
+}
+
+ion-content{
+    --background: #ffff;
+}
+
+.texto{
+    //background-color: #A6DC82;
+    
+    text-align: center;
+    //padding: 10px;
+}
+
+.slide-img-padding{
+    padding: 30px;
+}
+
+.img2{
+    height: 200px;
+    width: 700px;
+}
+
+.div1{
+    //background-image: url("https://img.freepik.com/foto-gratis/fondo-acuarela-pintada-mano-forma-cielo-nubes_24972-1095.jpg?size=626&ext=jpg");
+    background: url("https://img.freepik.com/foto-gratis/fondo-acuarela-pintada-mano-forma-cielo-nubes_24972-1095.jpg?size=626&ext=jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+
+

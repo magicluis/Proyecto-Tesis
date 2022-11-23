@@ -1,0 +1,15 @@
+:root{
+        --ion-safe-area-top:20px;
+        --ion-safe-area-botton:22px;
+}
+
+ion-modal.stack-modal {
+    --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+    --backdrop-opacity: var(--ion-backdrop-opacity, 0.32);
+  }
+
+  .arriba{
+        background-color: #000000;
+        --background:  #E62A08;
+        color: #ffffff;
+    }

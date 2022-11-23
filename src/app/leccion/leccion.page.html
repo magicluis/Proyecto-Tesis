@@ -1,0 +1,132 @@
+<ion-card-header>
+  
+ 
+    <ion-grid>
+      <ion-row>
+
+        <ion-col sizeLg = "2" sizeMd="10" sizeXs="2">  
+          <ion-icon name="sparkles" class="icon1"></ion-icon>
+        </ion-col>
+
+        <ion-col sizeLg = "8" sizeMd="10" sizeXs="8">  
+          <ion-progress-bar color="warning"  value="{{ porcent }}" buffer="0.5"></ion-progress-bar>
+        </ion-col>
+        <ion-col sizeLg = "2" sizeMd="10" sizeXs="2">
+          <div class="texto1">{{contadorPregunta + 1}}/10</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+
+</ion-card-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg = "10" sizeMd="10" sizeXs="10" offset="1" >
+        <div class="data"><div class="datahijo"><h1>{{ envioTexto }}</h1>
+        </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!--<ion-grid>
+    <ion-row aling-item-center>
+      <ion-col sizeLg = "4" sizeMd="10" sizeXs="4" offset="1">
+        <div class="texto"><ion-button color="warning" expand="full" shape="round">Consultar</ion-button></div>
+      </ion-col>
+      <ion-col sizeLg = "2" sizeMd="10" sizeXs="2">
+        <div class="texto"><ion-icon name="trash-sharp"></ion-icon></div>
+      </ion-col>
+      <ion-col sizeLg = "4" sizeMd="10" sizeXs="4">
+        <div class="texto"><ion-button color="warning" expand="full" shape="round">Ayuda</ion-button></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>-->  
+  <div *ngIf = "comienzo">
+
+  <div *ngIf = "multiple;else other_content">
+
+  <ion-grid>
+    <ion-row aling-item-center>
+      <ion-col sizeLg = "10" sizeMd="10" sizeXs="10" offset="1">
+        
+        <div  class="grupo">
+          <!--<ion-button color="warning" expand="full" class="btnT" (click)="seleccionado(item)" >{{ item }}</ion-button>-->
+          
+          <ion-chip color="tertiary" *ngFor = "let item of listaActual" >
+            <ion-label (click)="seleccionado(item)" >{{ item }}</ion-label>
+          </ion-chip>
+
+          <!--<ion-list>
+            <ion-item>
+              <ion-checkbox color="primary" slot="start"></ion-checkbox>
+              <ion-label>{{ item }}</ion-label>
+            </ion-item>
+          </ion-list>-->
+
+        </div>
+      
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+
+  <ng-template #other_content>
+    <ion-grid>
+      <ion-row aling-item-center>
+        <ion-col sizeLg = "5" sizeMd="5" sizeXs="5" offset="1">
+          <div class="texto"><ion-button expand="full" class="btnT1" (click)="seleccionado('Verdadero')">Verdadero</ion-button></div>
+        </ion-col>
+        <ion-col sizeLg = "5" sizeMd="5" sizeXs="5">
+          <div class="texto"><ion-button color="dark" expand="full" class="btnT1" (click)="seleccionado('Falso')">Falso</ion-button></div>
+        </ion-col>  
+      </ion-row>
+    </ion-grid>
+  </ng-template>
+</div>
+
+</ion-content>
+
+<!--<ion-footer>
+
+  <ion-grid>
+    <ion-row aling-item-center>
+      <ion-col sizeLg = "8" sizeMd="10" sizeXs="8" offset="2">
+        <div class="texto"><ion-button color="danger" expand="full" shape="round" (click)="changePalabras()" >SIGUENTE</ion-button></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-footer>-->
+
+
+<ion-footer>
+
+  <ion-row aling-item-center>
+    <ion-col sizeLg = "4" sizeMd="4" sizeXs="4">
+      <ion-tab-button tab="speakers" routerLink="/tarjeta">
+        <ion-icon name="book" class="ficon"></ion-icon>
+        <ion-label class="abajo">Lecciones</ion-label>
+      </ion-tab-button>
+    </ion-col>
+    <ion-col sizeLg = "4" sizeMd="4" sizeXs="4">
+      <ion-tab-button tab="speakers" routerLink="/menu">
+        <ion-icon name="home" class="ficon"></ion-icon>
+        <ion-label class="abajo">Menu</ion-label>
+      </ion-tab-button>
+    </ion-col>
+    <ion-col sizeLg = "4" sizeMd="4" sizeXs="4">
+
+      <ion-tab-button tab="speakers">  
+        <ion-icon name="close-circle" class="ficon"></ion-icon>
+        <ion-label class="abajo">{{ numeroFalla }} Errores</ion-label>
+
+      </ion-tab-button>
+    </ion-col>
+  </ion-row>
+
+</ion-footer>
+

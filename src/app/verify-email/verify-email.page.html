@@ -1,0 +1,37 @@
+<ion-toolbar class="arriba">
+  <ion-buttons slot="start">
+    <ion-button routerLink="/login">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-title>Verificar Email </ion-title>
+</ion-toolbar>
+
+<ion-content *ngIf="user$ | async as user">
+  <ion-row>
+    <ion-col>
+      <h2>Gracias por registrarte!!!</h2>
+      <p>Te hemos enviado un correo electrónico a <strong>{{user.email}}</strong></p>
+      <p>Por favor revisa tu correo y da click en el link enviado para confirmar tu cuenta.</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button class="btn0" type="submit" expand="block" (click)="onSendEmail()">
+        Reenviar correo Confirmacion
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="btn1" type="submit" expand="block" (click)="funRegreso()">
+        Regresar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

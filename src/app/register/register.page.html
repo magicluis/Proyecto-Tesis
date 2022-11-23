@@ -1,0 +1,126 @@
+<!--<ion-header>
+</ion-header>
+
+<ion-content>
+
+  <div class="shape">
+    <img src="https://st2.depositphotos.com/1010735/11020/v/950/depositphotos_110202084-stock-illustration-background-with-color-letters.jpg"/>
+  </div>
+
+  <div class="background-pic">
+    <div class="background-filter">
+
+      <ion-card>
+        <ion-card-header>
+          
+        </ion-card-header>
+        
+        <ion-card-content>
+        
+          <div class="tarjet">
+
+          <ion-item>
+            <ion-input placeholder="Nombre" type="text" #name required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Apellido" type="text" #last required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Carnet" type="text" #carnet required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="seccion" type="text" #seccion required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Correo Electronico" type="email" #email required></ion-input>
+          </ion-item> 
+          <ion-item>
+            <ion-input placeholder="Contraseña" type="password" #password required></ion-input>
+          </ion-item>
+          <div class="botton-section">
+          <ion-button class="btn1" type="submit" (click)="onRegister(name,last,carnet,seccion,email,password)" >Registrarse</ion-button>
+          
+        </div>
+          </div>
+
+          <ion-col>
+            <br>
+            <p>
+              <a routerLink="/login">Tengo una cuenta?</a>
+            </p>
+          </ion-col>
+          
+        </ion-card-content>
+
+
+      </ion-card>
+    </div>
+  </div>
+
+</ion-content>-->
+
+<ion-header  class="ion-no-border">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+<div class="imgH">
+  <ion-img src="https://st2.depositphotos.com/1010735/11020/v/950/depositphotos_110202084-stock-illustration-background-with-color-letters.jpg"></ion-img>
+</div>
+
+  <ion-card-header>
+    <div class="subt">
+      <img src="../../assets/img5.jpg"/>
+      </div>
+
+  </ion-card-header>
+
+  <ion-card-content>
+
+    
+
+    <div class="nuevoCard">
+
+          <div class="subt1">
+
+            <ion-item>
+              <ion-input placeholder="Nombre" type="text" #name required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input placeholder="Apellido" type="text" #last required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input placeholder="Carnet" type="text" #carnet required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input placeholder="seccion" type="text" #seccion required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input placeholder="Correo Electronico" type="email" #email required></ion-input>
+            </ion-item> 
+            <ion-item>
+              <ion-input placeholder="Contraseña" type="password" #password required></ion-input>
+            </ion-item>
+
+            
+
+              <div class="botton-section">
+                <ion-button class="btn2" type="submit" (click)="onRegister(name,last,carnet,seccion,email,password)">Registrarse</ion-button>
+                </div>
+                <br>
+                <p><a routerLink="/login">Tengo una cuenta?</a> </p>
+                
+          </div>
+        </div>
+
+      
+  </ion-card-content>
+
+</ion-content>
+
+
+

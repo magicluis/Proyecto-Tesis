@@ -1,0 +1,127 @@
+ion-content{
+  --ion-background-color: #fff !important;
+}
+
+ion-toolbar{
+  --ion-background-color: transparent;
+  --opacity:0;
+}
+
+ion-card{
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+
+ion-card-title{
+  margin-top: 30px;
+  font-size: 20px;
+  color:#080808;
+  text-align:center;
+  font-weight: 600;
+}
+
+ion-card-subtitle{
+  padding-top: 15px;
+  font-size:11px;
+  color:#898585;
+  text-align: center;
+  font-weight: 300;
+}
+
+ion-header{
+  position: absolute;
+}
+
+ion-card{
+  --ion-background-color:transparent;
+   box-shadow: none !important;
+}
+
+.signin-btns{
+  margin-top: 35px;
+  text-align: center;
+  color:#F0F4FA;
+}
+
+.loginbtn{
+  --ion-color-primary:#215AB7;
+}
+
+.text-tag{
+  margin-top: 20px;
+  text-align: center;
+  span{
+    font-size: 13px;
+    font-weight: normal;
+    color:#898585;
+  }
+}
+
+.social-btns{
+  margin-top: 20px;
+  text-align: center;
+  ion-button{
+    width:40px;
+    padding-left: 5px !important;
+  }
+}
+
+
+.nuevoCard{
+  margin-top:50px;
+  text-align: center;
+  border-radius: 10%;
+  box-shadow: #EE190F;
+  //box-shadow: 2px 2px 5px 5px #215AB7;
+}
+
+
+.subt{
+  height: 40px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.subt1{
+  height: 40px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+
+.tajet{
+  border: black solid;
+  background:black;
+  color:black;
+  margin-top: 50px;
+  }
+
+  .botton-section{
+    margin-top: 90px;
+    .btn1{
+        --background: #EE190F;
+        height: 50px;
+        width: 250px;
+        --border-radius: 40px;
+        --border: 1px solid;
+    }
+    .btn2{
+        --background: #062EA1;
+        height: 50px;
+        width: 250px;
+        color: #fff;
+        --border-radius: 40px;
+        --border: 1px solid;
+    }
+}
+
+///----------- nuevo --------
+
+.imgH{
+  height: 100px;
+}

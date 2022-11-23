@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar class="arriba">
+    <ion-title>Progreso</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click) = "closeModal()" >Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+
+  <ion-item *ngFor="let item of listaProgreso;" mode="ios">
+    <ion-avatar slot="start">
+      <ion-img src="https://www.pinclipart.com/picdir/middle/123-1238448_short-discussions-with-parenting-and-child-development-icono.png"></ion-img>
+    </ion-avatar>
+    <ion-label>
+      <h2><b>Nivel {{ item.nivel }}</b></h2>
+      <p><b>Descripcion:</b> {{ item.informacion }}</p>
+      <p> <b>Estrellas:</b> {{ item.estrellas }}</p>
+      <p><b>Porcentaje:</b> {{ item.porcentaje*10 }}</p>
+      <p> <b>Puntuacion:</b> {{ item.puntuacion }}</p>
+    </ion-label>
+  </ion-item>
+  
+</ion-list>
+</ion-content>
+
+

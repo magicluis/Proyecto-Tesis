@@ -1,0 +1,124 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-title>Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>-->
+
+
+<ion-toolbar class="arriba">
+  <ion-buttons slot="start">
+    <ion-button routerLink="/menu">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-title>Usuarios</ion-title>
+</ion-toolbar>
+
+<!--<ion-content>
+  <ion-searchbar showCancelButton animated placeholder="Buscar"></ion-searchbar>
+
+  <ion-list class="accordion-list" lines="none" detail="false" no-padding>
+    <ion-item tappable (click)="toggleSection()" [ngClass]="{'section-active': mostrar, 'section': !mostrar }">
+        <ion-icon slot="start" name="arrow-forward"></ion-icon>
+      <label>
+        nombre
+      </label>
+    </ion-item>
+
+    <div *ngIf="mostrar">
+      Test
+    </div>
+  </ion-list>
+
+</ion-content>-->
+
+<br>
+<br>
+
+<ion-content>
+<ion-searchbar #search debonce="500" (ionChange)="ionChange($event)" placeholder="Filter Schedules" mode="ios"></ion-searchbar>
+
+<ion-list>
+
+  <ion-item>
+    <ion-label>Seccion</ion-label>
+    <ion-select placeholder="Select One" mode="ios" (ionChange)="seleccion($event)">
+      <ion-select-option *ngFor="let item of listaSeccionAux;" [value]="item">{{ item }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+
+<ion-list *ngFor="let item of auxiliar; let i = index; " class="accordion-list" lines="none" details="false" no-padding>
+<ion-item tappable (click)="toogleSeccion(i)" [ngClass]="{'section-active': item.open, 'section':!item.open}">
+  <ion-icon slot="start" name="add-circle" *ngIf="!item.open"></ion-icon>
+  <ion-icon slot="start" name="close" *ngIf="item.open"></ion-icon>
+<ion-label>
+  {{ item.nombre }}
+</ion-label>
+</ion-item>
+<div *ngIf="item.open">
+
+  <ion-card mode= "ios">
+    <ion-item>
+      <ion-icon name="document-text-outline" slot="start"></ion-icon>
+      <ion-label>Informacion</ion-label>
+    </ion-item>
+  
+    <ion-card-content>
+     <ion-label>Nombre : {{ item.nombre }}</ion-label> <br>
+     <ion-label>Apellido: {{ item.apellido }}</ion-label><br>
+     <ion-label>Seccion : {{ item.seccion }}</ion-label><br>
+     <ion-label>Carnet : {{ item.carnet }}</ion-label><br>
+     <ion-button (click)="presentModal(item.id)" expand="block" class="btnp">Progreso</ion-button>
+     <!--<ion-label *ngFor="let item1 of informacionProgreso[i];">{{ item1.informacion }} <br></ion-label>-->
+
+    </ion-card-content>
+  </ion-card>
+  
+
+
+</div>
+</ion-list>
+</ion-content>
+
+
+<!--
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="tab">
+  <input type="checkbox" id="tab-one" name="tabs">
+  <label for="tab-one"><p>uno</p></label>
+  <div class="tab-content">
+  <p>
+    Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+  </p>
+  </div>
+  </div>
+
+  <div class="tab">
+    <input type="checkbox" id="tab-two" name="tabs">
+    <label for="tab-two"><p>tres</p></label>
+    <div class="tab-content">
+    <p>
+      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+    </p>
+    </div>
+    </div>
+
+    <div class="tab">
+      <input type="checkbox" id="tab-three" name="tabs">
+      <label for="tab-three"><p>dos</p></label>
+      <div class="tab-content">
+      <p>
+        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+      </p>
+      </div>
+      </div>
+
+</ion-content>-->
